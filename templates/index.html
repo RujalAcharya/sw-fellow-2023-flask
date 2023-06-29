@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} Flask App {% endblock %}
+
+{% block body %}
+    <form method="POST" action="/" enctype="multipart/form-data" >
+        {{ form.csrf_token }}
+        <p>
+            {{ form.name.label }}
+            {{ form.name }}
+        </p>
+        <p>
+            {{ form.age.label }}
+            {{ form.age }}
+        </p>
+        <p>
+            {{ form.gender.label }}
+            {{ form.gender }}
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+{% endblock %}
+
+

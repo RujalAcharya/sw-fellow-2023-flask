@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %} people {% endblock %}
+
+{% block body %}
+    <h2>List of people</h2>
+
+    {% for person in people %}
+        <p><b>{{ person['name'] }}</b> : <i>{{ person['age'] }}</i>, {{ person['gender'] }} </p>
+    {% endfor %}
+
+{% endblock %}
